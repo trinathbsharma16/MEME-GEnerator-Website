@@ -1,0 +1,104 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+    background-color: #f4f4f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    transition: background-color 0.3s ease;
+  }
+  
+  .meme-generator {
+    text-align: center;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 100%;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 0.5s forwards;
+  }
+  
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .site-title {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+    animation: fadeInSlideDown 0.6s ease forwards;
+  }
+  
+  @keyframes fadeInSlideDown {
+    0% {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .generate-meme-btn {
+    padding: 12px 30px;
+    border: none;
+    border-radius: 8px;
+    margin: 20px 0;
+    font-size: 18px;
+    color: #fff;
+    background-color: #007bff;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .generate-meme-btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+  }
+  
+  .meme-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: opacity 0.3s ease;
+  }
+  
+  .meme-title {
+    font-size: 1.5rem;
+    color: #555;
+    margin-bottom: 12px;
+  }
+  
+  img {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  
+  .meme-author {
+    font-size: 1rem;
+    color: #777;
+  }
+  
+  .fade-in {
+    opacity: 1 !important;
+    transform: scale(1) !important;
+  }
+  
